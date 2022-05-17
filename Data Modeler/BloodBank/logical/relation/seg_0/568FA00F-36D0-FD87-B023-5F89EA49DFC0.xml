@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="HOSPITAL_STOCK" directorySegmentName="seg_0" id="568FA00F-36D0-FD87-B023-5F89EA49DFC0">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>D58423EB-6D32-DD59-8B66-4160EDC0C380</importedID>
+<engineerTo>
+<item key="94D41D2A-481E-E7A2-DAEA-D831B001C43E" value="true"/>
+</engineerTo>
+<sourcePk>D423B962-9045-E495-466E-03CD169A3D5E</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>20904C69-4137-D45A-6EF1-2F8296791639</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>3CFE2FF6-D9F7-BF56-B7A8-B27A365F519A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

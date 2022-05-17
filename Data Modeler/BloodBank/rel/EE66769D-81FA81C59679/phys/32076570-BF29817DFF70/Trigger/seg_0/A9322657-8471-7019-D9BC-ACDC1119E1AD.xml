@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="trg_blood_bank_dml_briud" directorySegmentName="seg_0" id="A9322657-8471-7019-D9BC-ACDC1119E1AD">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 16:27:29 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<actions>INSERT, UPDATE, DELETE</actions>
+<body><![CDATA[BEGIN
+    IF(TO_CHAR(SYSDATE, 'dy') IN ('sat', 'sun')) OR (TO_CHAR(SYSDATE, 'hh24mi') NOT BETWEEN '0600' AND '2000') THEN
+        RAISE_APPLICATION_ERROR(-20113, 'DML OPERATIONS OUTSIDE THE WORKING HOURS [ 06:00 - 20:00 ]');
+    END IF;
+END;
+]]></body>
+<triggerTime>BEFORE</triggerTime>
+<scope>FOR EACH STATEMENT</scope>
+<table>2BD10803-FE7C-21EB-DF49-3BAAEFB2AB4F</table>
+</TriggerOraclev10g>

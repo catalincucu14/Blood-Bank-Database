@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="C8DA5F09-04B9-BF80-A924-E7B80F18B8E1" mainViewID="50111221-9898-6D7A-643A-938B6B11D4F2">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:57:21 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

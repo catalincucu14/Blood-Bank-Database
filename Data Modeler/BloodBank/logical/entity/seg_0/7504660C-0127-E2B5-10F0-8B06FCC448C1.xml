@@ -1,0 +1,108 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7504660C-0127-E2B5-10F0-8B06FCC448C1" name="DONATION">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>47E403AE-E2B2-11A0-D7AB-3538716479CF</importedID>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>DONATION</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="62758FC3-51A0-C230-9F2F-F3A8EDA15D52">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>9365CCB4-9D1B-45B4-C808-625190838AC3</importedID>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DONOR" id="E99D4321-7BFA-E0A4-832D-3A9DCD4AB359">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<generatorID>F98CD6A4-7A90-70E2-086B-AF1CDCF12A18</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>B5112DF5-A6A1-B13D-15A9-4C46D38A212C</importedID>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<referedAttribute>C2F7E8AF-4251-1AEF-B863-F304E9209B16</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DONATION_DATE" id="FCDA21A8-50F7-56B4-5EE8-4B67E72F358D">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>26935DAF-B9A4-0E13-6B92-B6ADC01866E5</importedID>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="INITIAL_QUANTITY" id="2A83EE08-1CCB-B9EA-1C07-470BB054DA77">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>98FEAE80-D184-A424-7241-58D72CD8DC37</importedID>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AVAILABLE_QUANTITY" id="2AD983D3-5C8D-B682-8D8D-809259C90315">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:25:28 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="99F154F6-4F67-0095-B402-AC4B958D78A9" name="DONATION PK">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<importedID>22C80A5A-FAA5-0DC4-8A5A-62115DA8B949</importedID>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>62758FC3-51A0-C230-9F2F-F3A8EDA15D52</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

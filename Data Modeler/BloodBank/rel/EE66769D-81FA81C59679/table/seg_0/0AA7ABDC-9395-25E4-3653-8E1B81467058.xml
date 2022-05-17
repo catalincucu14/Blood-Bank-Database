@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="0AA7ABDC-9395-25E4-3653-8E1B81467058" name="HOSPITAL">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>20904C69-4137-D45A-6EF1-2F8296791639</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<abbreviation>HOSPITAL</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="70E5ACDE-FAE9-B12F-7B7B-E846B699D95A">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>B49F61C6-8515-70E1-D73D-A71DA4F8F84B</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NAME" id="48D53001-715C-8F79-9975-A2EE1362081E">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>FDF710F2-829C-1D3B-C6E4-F7E34635FE60</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<constraintName>HOSPITAL_NAME_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>75</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(NAME) &gt; 3"/>
+</checkConstraint>
+<ownDataTypeParameters>75,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CITY" id="6A55FFD3-1477-773A-C1D7-D4F2E10DE42D">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>F196D556-F7CA-26B6-54A6-33CB29B2754B</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<constraintName>HOSPITAL_CITY_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(CITY) &gt; 3"/>
+</checkConstraint>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADDRESS" id="A9E2F1A9-2025-683F-9C28-8C97C7E110FF">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>ABF78B6D-35C4-C907-76C4-092C439F7EE9</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<constraintName>HOSPITAL_ADDRESS_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>75</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(ADDRESS) &gt; 3"/>
+</checkConstraint>
+<ownDataTypeParameters>75,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="F090A8B9-40E0-3354-75BB-678942BBC737" name="HOSPITAL_PK">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>D423B962-9045-E495-466E-03CD169A3D5E</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="70E5ACDE-FAE9-B12F-7B7B-E846B699D95A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

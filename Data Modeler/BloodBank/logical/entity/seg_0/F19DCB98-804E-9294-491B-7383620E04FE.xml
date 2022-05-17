@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="F19DCB98-804E-9294-491B-7383620E04FE" name="TRANSACTION">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-13 15:44:06 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="9EB5528B-65ED-14C6-8180-758FAC136651">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-13 16:38:29 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="STOCK_ID" id="BC156938-F7DA-C58D-8791-19B27F88121D">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-13 16:21:37 UTC</createdTime>
+<generatorID>0150D438-C80C-632D-7F17-5C6D6CA12191</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<referedAttribute>30632DFE-3A1C-FBC0-945D-C43DE0F55A4F</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="DONATION_ID" id="1B34FD92-ED3B-85E4-5BCD-AF24E180991D">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-13 16:21:47 UTC</createdTime>
+<generatorID>F5B4500A-1C89-48B7-3232-FEBEA7DC45E0</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<referedAttribute>62758FC3-51A0-C230-9F2F-F3A8EDA15D52</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="TRANSACTION_DATE" id="A97C7358-D58D-9D00-AC28-8E5ECE223EF4">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-13 16:25:41 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="QUANTITY" id="AE09F832-E82A-35A9-7E25-429C24B57616">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-13 17:00:14 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="6AA19E6D-1A79-1655-46C2-B2222434055B" name="TRANSACTION PK">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:25:59 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9EB5528B-65ED-14C6-8180-758FAC136651</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

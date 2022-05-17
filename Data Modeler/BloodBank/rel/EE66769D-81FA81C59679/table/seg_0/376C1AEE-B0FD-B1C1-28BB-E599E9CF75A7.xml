@@ -1,0 +1,103 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="376C1AEE-B0FD-B1C1-28BB-E599E9CF75A7" name="DONATION">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>7504660C-0127-E2B5-10F0-8B06FCC448C1</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<abbreviation>DONATION</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="CA5A1921-EAAA-2884-5646-FF87D9A7D04C">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>62758FC3-51A0-C230-9F2F-F3A8EDA15D52</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,15,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DONOR_ID" id="857157E3-CE2D-561C-E6A1-366AA6E219F8">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>E99D4321-7BFA-E0A4-832D-3A9DCD4AB359</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="298AACB1-E66E-CB12-3C54-01F57F4113BA" referredColumn="1EF15DB2-05F2-C80C-50ED-EC8FD59A5CEC"/>
+</associations>
+</Column>
+<Column name="DONATION_DATE" id="4F1B898E-91AA-D8F3-70A7-2AB11B5FF383">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>FCDA21A8-50F7-56B4-5EE8-4B67E72F358D</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INITIAL_QUANTITY" id="347DE895-C10D-2422-8837-D2B6988F17B4">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>2A83EE08-1CCB-B9EA-1C07-470BB054DA77</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AVAILABLE_QUANTITY" id="D8975EEE-8343-AD8B-482C-6FF2B6E175AB">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>2AD983D3-5C8D-B682-8D8D-809259C90315</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8D46FCD4-D67C-F4DE-D606-EB7FDE740573" name="DONATION_PK">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>99F154F6-4F67-0095-B402-AC4B958D78A9</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CA5A1921-EAAA-2884-5646-FF87D9A7D04C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3B76B814-CC4E-C374-111D-A8DADEF61319" name="DONATION_DONOR_FK">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>F98CD6A4-7A90-70E2-086B-AF1CDCF12A18</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="857157E3-CE2D-561C-E6A1-366AA6E219F8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

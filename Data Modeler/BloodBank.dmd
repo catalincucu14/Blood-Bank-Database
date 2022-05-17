@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="BloodBank" id="D6DBCB43-F66E-8CE2-B721-EEEF695CC5A4" version="3.5">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:57:21 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>D6DBCB43-F66E-8CE2-B721-EEEF695CC5A4</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="D366254B-88CC-2F4E-7111-5C94FC5609F8">
+<designStoragePath>D:\Github\Blood-Bank-Database\src\data-modeler\blood-bank</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
+</OSDM_Design>

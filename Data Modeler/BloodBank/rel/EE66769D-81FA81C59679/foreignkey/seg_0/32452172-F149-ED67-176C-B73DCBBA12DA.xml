@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="32452172-F149-ED67-176C-B73DCBBA12DA" containerWithKeyObject="F4DF4626-ED36-BACA-1C05-FFFCB869D025" localFKIndex="EDF0E54A-EA63-A1B0-C7C3-82DB967A6D4D" name="TRANSACTION_DONATION_FK">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>F5B4500A-1C89-48B7-3232-FEBEA7DC45E0</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<referredTableLongName>DONATION</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>376C1AEE-B0FD-B1C1-28BB-E599E9CF75A7</referredTableID>
+<keyObject>8D46FCD4-D67C-F4DE-D606-EB7FDE740573</keyObject>
+<referredKeyID>8D46FCD4-D67C-F4DE-D606-EB7FDE740573</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

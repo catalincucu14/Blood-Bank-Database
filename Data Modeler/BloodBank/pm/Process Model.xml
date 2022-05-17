@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="EC399D48-D760-A2FE-92AC-46DD43936E1C">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:57:21 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

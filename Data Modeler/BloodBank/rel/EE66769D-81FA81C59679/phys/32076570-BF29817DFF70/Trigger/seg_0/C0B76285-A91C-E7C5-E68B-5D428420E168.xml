@@ -1,0 +1,22 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="trg_donation_date_1_briu" directorySegmentName="seg_0" id="C0B76285-A91C-E7C5-E68B-5D428420E168">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 16:26:47 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[DECLARE
+	 v_last_donation_date medical_data.last_donation_date%TYPE;
+BEGIN
+    -- Check if the donor has donated before
+    SELECT last_donation_date INTO v_last_donation_date FROM medical_data WHERE donor_id = :new.donor_id;
+    IF(v_last_donation_date IS NOT NULL) THEN
+        -- Check if from donor's last donation and the new donation have passed at least 3 months
+        IF(MONTHS_BETWEEN(:new.donation_date, v_last_donation_date) < 3 AND :old.donation_date != :new.donation_date) THEN
+            RAISE_APPLICATION_ERROR( -20110, 'donation.donation_date INVALID [ ' || TO_CHAR(:new.donation_date, 'DD.MM.YYYY') || ' ]. IT MUST BE PASSED AT LEAST 3 MONTHS FROM THE LAST DONATION.' );
+        END IF;
+    END IF;
+END;
+/]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>376C1AEE-B0FD-B1C1-28BB-E599E9CF75A7</table>
+</TriggerOraclev10g>

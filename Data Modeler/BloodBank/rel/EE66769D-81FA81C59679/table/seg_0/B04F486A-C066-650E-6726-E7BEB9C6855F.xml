@@ -1,0 +1,207 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B04F486A-C066-650E-6726-E7BEB9C6855F" name="PERSONAL_DATA">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>1B5694C2-EFD4-C547-5DDE-12CD8FA04E80</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<abbreviation>PERSONAL_DATA</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="DONOR_ID" id="77A3AB6D-0C4D-AF7D-B891-CCF3E0921BAE">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>1D9DECC8-2853-7416-29FC-9BEAB88F88CF</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="98E465B2-4065-FCFA-024C-79921C3F820F" referredColumn="1EF15DB2-05F2-C80C-50ED-EC8FD59A5CEC"/>
+</associations>
+</Column>
+<Column name="CNP" id="1C68EDA2-7F94-F75F-FE82-CD47630D924F">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>84CD3D7F-6493-F866-86B7-A4C35564E6A0</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<constraintName>PERSONAL_DATA_CNP_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(CNP) = 13"/>
+</checkConstraint>
+<ownDataTypeParameters>13,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="SERIES_ID" id="4FC40E4C-6EDA-C989-406A-DBAE9F308346">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>E6A39078-34F7-B813-B2A8-CA85A72F0B4D</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<constraintName>PERSONAL_DATA_SERIES_ID_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="REGEXP_LIKE ( series_id, &apos;[a-zA-Z][a-zA-Z]&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NUMBER_ID" id="63870940-DF51-34B5-6E6D-8703C1ED5516">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>68F2A313-46A5-B1DA-57C0-A641A4ADD435</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<constraintName>PERSONAL_DATA_NUMBER_ID_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="REGEXP_LIKE ( number_id, &apos;[0-9][0-9][0-9][0-9][0-9][0-9]&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CITY" id="AEF48C30-104E-3E9E-5C63-F63E05D20D16">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>CC5463E9-38BD-D778-FB80-B1A3475ACFDC</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<constraintName>PERSONAL_DATA_CITY_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(CITY) &gt; 3"/>
+</checkConstraint>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ADDRESS" id="199CF71D-ED3D-F0A7-03B6-019B5F02E288">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>81D27469-8CCF-A6D2-7D77-7484DE0994BB</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<constraintName>PERSONAL_DATA_ADDRESS_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>75</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(ADDRESS) &gt; 5"/>
+</checkConstraint>
+<ownDataTypeParameters>75,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PHONE" id="0025938C-6F50-3B35-9E8C-D496A944B9E2">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>B6645BA4-1B4E-3F53-314C-C824A5A0325C</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<constraintName>PERSONAL_DATA_PHONE_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="REGEXP_LIKE ( phone, &apos;07[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="MAIL" id="F77C341D-FFF6-1D2B-8E17-45FAFC9FDF0D">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>090AEA6B-165E-0A0E-4FFB-F7C5948DC432</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DF395051-F6F8-AA92-A0B0-AE503AE9A045" name="PERSONAL_DATA_MAIL_UN">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>247882F6-C3EA-8450-CDB3-C3D177880979</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F77C341D-FFF6-1D2B-8E17-45FAFC9FDF0D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1CAC3E03-494A-A464-1F83-4F7A05D4D6C0" name="PERSONAL_DATA_PHONE_UN">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>ADB37969-F6D0-FA3B-E8F2-527E9FD555FD</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0025938C-6F50-3B35-9E8C-D496A944B9E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3726BDE4-A92D-AC83-A28C-26F9445F82BA" name="PERSONAL_DATA_SR_NO_ID_UN">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>0D8D8FC1-65B8-33F8-BCB2-B78D232AE6BB</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4FC40E4C-6EDA-C989-406A-DBAE9F308346"/>
+<colUsage columnID="63870940-DF51-34B5-6E6D-8703C1ED5516"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CB26EFAD-8D3B-656C-7E41-5764CF08FD6C" name="PERSONAL_DATA_CNP_UN">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>130F110E-E676-1010-352A-446EFED01C01</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C68EDA2-7F94-F75F-FE82-CD47630D924F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FBF382E3-5E45-F2DB-BCEB-69CF1E14D979" name="PERSONAL_DATA__IDX">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>54340225-F013-717A-ADC4-909276800AB0</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="77A3AB6D-0C4D-AF7D-B891-CCF3E0921BAE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3EBF7EAE-5A14-83C9-FE4C-C56D2DB8CBF7" name="PERSONAL_DATA_DONOR_FK">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>54340225-F013-717A-ADC4-909276800AB0</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="77A3AB6D-0C4D-AF7D-B891-CCF3E0921BAE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="trg_donation_date_2_briu" directorySegmentName="seg_0" id="E4F8805A-A284-AAAD-AF41-39B28CFB78F4">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 08:38:50 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[BEGIN
+    -- Check if is inserting
+    IF INSERTING THEN
+        -- Check if the inserted quantity is valid
+        IF :new.initial_quantity > 449 AND :new.initial_quantity < 501 THEN
+            :new.available_quantity := :new.initial_quantity;
+        ELSE
+            RAISE_APPLICATION_ERROR( -20110, 'donation.initial_quantity CANNOT BE LESS THAN 450 AND MORE THAT 500.' );
+        END IF;
+    END IF;
+    -- Check if is updating
+    IF UPDATING THEN
+        IF :old.initial_quantity = :new.initial_quantity AND :old.available_quantity != :new.available_quantity THEN
+            DBMS_OUTPUT.put_line( 'donation.available_quantity CANNOT BE UPDATED.' );
+        END IF;
+        -- Check if the donation have been transferred before
+        IF :new.initial_quantity > 449 AND :new.initial_quantity < 501 THEN
+            IF :old.initial_quantity = :old.available_quantity THEN
+                :new.available_quantity := :new.initial_quantity;
+            ELSE
+                RAISE_APPLICATION_ERROR( -20111, 'donation.initial_quantity CANNOT BE CHANGED AFTER TRANSFER.' );
+            END IF;
+        ELSE
+            RAISE_APPLICATION_ERROR( -20110, 'donation.initial_quantity CANNOT BE LESS THAN 450 AND MORE THAT 500.' );
+        END IF;
+    END IF;
+END;
+/]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>376C1AEE-B0FD-B1C1-28BB-E599E9CF75A7</table>
+</TriggerOraclev10g>

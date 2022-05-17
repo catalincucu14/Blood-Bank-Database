@@ -1,0 +1,116 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F4DF4626-ED36-BACA-1C05-FFFCB869D025" name="TRANSACTION">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>F19DCB98-804E-9294-491B-7383620E04FE</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="94AE16EB-6E2A-2508-E77A-C6E95DE29A10">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>9EB5528B-65ED-14C6-8180-758FAC136651</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="STOCK_ID" id="E684ABEC-3C83-49BA-8F81-58DE4FB06049">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>BC156938-F7DA-C58D-8791-19B27F88121D</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="849DE9AC-442D-62F7-C306-C95CB75AFA29" referredColumn="720B3742-283E-4F4E-B7DA-24BCF51A132F"/>
+</associations>
+</Column>
+<Column name="DONATION_ID" id="32277789-B500-8562-3CA7-57969F6CD156">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>1B34FD92-ED3B-85E4-5BCD-AF24E180991D</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>15</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="32452172-F149-ED67-176C-B73DCBBA12DA" referredColumn="CA5A1921-EAAA-2884-5646-FF87D9A7D04C"/>
+</associations>
+</Column>
+<Column name="TRANSACTION_DATE" id="82A8AE3E-844F-F9D7-737C-AAB08B1DD77A">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>A97C7358-D58D-9D00-AC28-8E5ECE223EF4</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="QUANTITY" id="A0674B98-3518-D294-AE86-31F82D81FEDA">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>AE09F832-E82A-35A9-7E25-429C24B57616</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>3</dataTypePrecision>
+<ownDataTypeParameters>,3,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6A4EC241-EB2C-48C1-5688-7B711EB6FE46" name="TRANSACTION_PK">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>6AA19E6D-1A79-1655-46C2-B2222434055B</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="94AE16EB-6E2A-2508-E77A-C6E95DE29A10"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EDF0E54A-EA63-A1B0-C7C3-82DB967A6D4D" name="TRANSACTION_DONATION_FK">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>F5B4500A-1C89-48B7-3232-FEBEA7DC45E0</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="32277789-B500-8562-3CA7-57969F6CD156"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="7108792E-B36D-BDFA-C348-D0B2B4089B4E" name="TRANSACTION_STOCK_FK">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>0150D438-C80C-632D-7F17-5C6D6CA12191</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E684ABEC-3C83-49BA-8F81-58DE4FB06049"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

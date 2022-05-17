@@ -1,0 +1,211 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="1B5694C2-EFD4-C547-5DDE-12CD8FA04E80" name="PERSONAL_DATA">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>E1E9D559-A626-9AA2-0E3C-3514D24DB244</importedID>
+<engineerTo>
+<item key="94D41D2A-481E-E7A2-DAEA-D831B001C43E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>PERSONAL_DATA</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="DONOR" id="1D9DECC8-2853-7416-29FC-9BEAB88F88CF">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<generatorID>54340225-F013-717A-ADC4-909276800AB0</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>A801A904-59FD-9BCE-C32E-76031F9FF2C8</importedID>
+<engineerTo>
+<item key="94D41D2A-481E-E7A2-DAEA-D831B001C43E" value="true"/>
+</engineerTo>
+<referedAttribute>C2F7E8AF-4251-1AEF-B863-F304E9209B16</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CNP" id="84CD3D7F-6493-F866-86B7-A4C35564E6A0">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>8CB2E775-D1FB-57B5-BF28-E111A2E84C0E</importedID>
+<engineerTo>
+<item key="94D41D2A-481E-E7A2-DAEA-D831B001C43E" value="true"/>
+</engineerTo>
+<constraintName>PERSONAL_DATA_CNP_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>13</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(CNP) = 13"/>
+</checkConstraint>
+<ownDataTypeParameters>13,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="SERIES_ID" id="E6A39078-34F7-B813-B2A8-CA85A72F0B4D">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>95764FBA-0B4A-163A-385C-45BC0D0EFD8F</importedID>
+<engineerTo>
+<item key="94D41D2A-481E-E7A2-DAEA-D831B001C43E" value="true"/>
+</engineerTo>
+<constraintName>PERSONAL_DATA_SERIES_ID_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="REGEXP_LIKE ( series_id, &apos;[a-zA-Z][a-zA-Z]&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="NUMBER_ID" id="68F2A313-46A5-B1DA-57C0-A641A4ADD435">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>38C7113F-0773-50DB-FB0D-F0D633E8DFD3</importedID>
+<engineerTo>
+<item key="94D41D2A-481E-E7A2-DAEA-D831B001C43E" value="true"/>
+</engineerTo>
+<constraintName>PERSONAL_DATA_NUMBER_ID_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>6</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="REGEXP_LIKE ( number_id, &apos;[0-9][0-9][0-9][0-9][0-9][0-9]&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>6,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CITY" id="CC5463E9-38BD-D778-FB80-B1A3475ACFDC">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>062D71A7-4289-1948-E57A-DB77465B3C4B</importedID>
+<engineerTo>
+<item key="94D41D2A-481E-E7A2-DAEA-D831B001C43E" value="true"/>
+</engineerTo>
+<constraintName>PERSONAL_DATA_CITY_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(CITY) &gt; 3"/>
+</checkConstraint>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ADDRESS" id="81D27469-8CCF-A6D2-7D77-7484DE0994BB">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>629002D5-07D9-6DC0-1E85-BDD85771FF69</importedID>
+<engineerTo>
+<item key="94D41D2A-481E-E7A2-DAEA-D831B001C43E" value="true"/>
+</engineerTo>
+<constraintName>PERSONAL_DATA_ADDRESS_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>75</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(ADDRESS) &gt; 5"/>
+</checkConstraint>
+<ownDataTypeParameters>75,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="PHONE" id="B6645BA4-1B4E-3F53-314C-C824A5A0325C">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>D22F82B6-9571-68FB-C5AA-D37389D54C58</importedID>
+<engineerTo>
+<item key="94D41D2A-481E-E7A2-DAEA-D831B001C43E" value="true"/>
+</engineerTo>
+<constraintName>PERSONAL_DATA_PHONE_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="REGEXP_LIKE ( phone, &apos;07[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MAIL" id="090AEA6B-165E-0A0E-4FFB-F7C5948DC432">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>ECBD96CF-17EF-3344-F101-AD300241B438</importedID>
+<engineerTo>
+<item key="94D41D2A-481E-E7A2-DAEA-D831B001C43E" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="247882F6-C3EA-8450-CDB3-C3D177880979" name="PERSONAL_DATA_MAIL_UN">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>227882DA-8DE8-694B-009E-33457805C7EF</importedID>
+<engineerTo>
+<item key="94D41D2A-481E-E7A2-DAEA-D831B001C43E" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>090AEA6B-165E-0A0E-4FFB-F7C5948DC432</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="ADB37969-F6D0-FA3B-E8F2-527E9FD555FD" name="PERSONAL_DATA_PHONE_UN">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>A873D2E4-0F46-97F7-48E7-FDB94927A345</importedID>
+<engineerTo>
+<item key="94D41D2A-481E-E7A2-DAEA-D831B001C43E" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>B6645BA4-1B4E-3F53-314C-C824A5A0325C</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="0D8D8FC1-65B8-33F8-BCB2-B78D232AE6BB" name="PERSONAL_DATA_SERIES_UN">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>21CC308C-CD4F-0725-77DB-FA17B3289907</importedID>
+<engineerTo>
+<item key="94D41D2A-481E-E7A2-DAEA-D831B001C43E" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>E6A39078-34F7-B813-B2A8-CA85A72F0B4D</attributeRef>
+<attributeRef>68F2A313-46A5-B1DA-57C0-A641A4ADD435</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="130F110E-E676-1010-352A-446EFED01C01" name="PERSONAL_DATA_CNP_UN">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>DC65D299-007B-16B2-1A02-64DCC89A637B</importedID>
+<engineerTo>
+<item key="94D41D2A-481E-E7A2-DAEA-D831B001C43E" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>84CD3D7F-6493-F866-86B7-A4C35564E6A0</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

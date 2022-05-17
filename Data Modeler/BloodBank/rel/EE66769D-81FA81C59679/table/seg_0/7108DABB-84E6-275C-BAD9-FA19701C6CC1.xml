@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7108DABB-84E6-275C-BAD9-FA19701C6CC1" name="DONOR">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>05389B0A-D6D0-884D-54E9-254119B7C3C5</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<abbreviation>DONOR</abbreviation>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="1EF15DB2-05F2-C80C-50ED-EC8FD59A5CEC">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>C2F7E8AF-4251-1AEF-B863-F304E9209B16</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<ownDataTypeParameters>,10,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FIRST_NAME" id="47298DD3-7EE6-1FBD-8C31-8B10D5ED7A70">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>856EF55F-7041-918A-692B-65ED38AD6372</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<constraintName>DONOR_FIRST_NAME_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(FIRST_NAME) &gt; 3"/>
+</checkConstraint>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LAST_NAME" id="2E216153-7A46-10C1-9D75-B6F90723AA5A">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>AE032E78-575B-D02A-9799-586E5290219B</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<constraintName>DONOR_LAST_NAME_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="length(LAST_NAME) &gt; 2"/>
+</checkConstraint>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="12EC0CA1-0D04-F489-44D8-DE08D183F092" name="DONOR_PK">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>9804339B-7AEE-F982-3352-99FF1BFEF8C9</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1EF15DB2-05F2-C80C-50ED-EC8FD59A5CEC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3E88B80D-5C7C-4492-7D07-D2CF9DBC29D2" name="DONOR_FIRST_NAME_LAST_NAME_UN">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-17 06:27:56 UTC</createdTime>
+<generatorID>428B3017-4F8C-3D8C-29BA-AE558C37CA8D</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="47298DD3-7EE6-1FBD-8C31-8B10D5ED7A70"/>
+<colUsage columnID="2E216153-7A46-10C1-9D75-B6F90723AA5A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

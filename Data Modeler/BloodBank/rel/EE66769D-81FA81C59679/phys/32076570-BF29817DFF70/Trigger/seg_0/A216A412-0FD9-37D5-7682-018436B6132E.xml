@@ -1,0 +1,23 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TriggerOraclev10g class="oracle.dbtools.crest.model.design.storage.oracle.v10g.TriggerOraclev10g" name="trg_birth_date_briu" directorySegmentName="seg_0" id="A216A412-0FD9-37D5-7682-018436B6132E">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 16:27:08 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<actions>INSERT, UPDATE</actions>
+<body><![CDATA[BEGIN
+    IF(TRUNC(:new.birth_date) > TRUNC(sysdate)) THEN
+        RAISE_APPLICATION_ERROR(-20110, 'donation.donation_date INVALID. IT CONNOT BE IN THE FUTURE');
+    END IF;
+    -- Check if the donor is not aged below 18 years old
+    IF(MONTHS_BETWEEN(SYSDATE, :new.birth_date)/12 < 18) THEN
+        RAISE_APPLICATION_ERROR( -20111, 'donor.birth_date INVALID [ ' || TO_CHAR(:new.birth_date, 'DD.MM.YYYY') || ' ]. DONOR CANNOT BE YOUNGER THAN 18 YEARS OLD.');
+    END IF;
+    -- Check if the donor is not aged above 60 years old
+    IF(MONTHS_BETWEEN(SYSDATE, :new.birth_date)/12 > 60) THEN
+        RAISE_APPLICATION_ERROR( -20112, 'donor.birth_date INVALID [ ' || TO_CHAR(:new.birth_date, 'DD.MM.YYYY') || ' ]. DONOR CANNOT BE OLDER THAN 60 YEAS OLD.');
+    END IF;
+END;
+/]]></body>
+<triggerTime>BEFORE</triggerTime>
+<table>FB9BFF0A-5750-0552-64B8-FE1297492A26</table>
+</TriggerOraclev10g>

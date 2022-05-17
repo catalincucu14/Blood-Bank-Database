@@ -1,0 +1,131 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="3CFE2FF6-D9F7-BF56-B7A8-B27A365F519A" name="STOCK">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>EBBF4433-F8D2-C8C2-B372-BBD2926C45A1</importedID>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<shortName>STOCK</shortName>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="30632DFE-3A1C-FBC0-945D-C43DE0F55A4F">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>3E1371B6-2DDE-8D4B-DA64-739A3BD68A1A</importedID>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<ownDataTypeParameters>,4,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="HOSPITAL_ID" id="2DB4027D-5CDE-4CEA-BE59-E7A401327E59">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<generatorID>568FA00F-36D0-FD87-B023-5F89EA49DFC0</generatorID>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>4E128F68-7C2A-33DE-80E1-D901153729A6</importedID>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<referedAttribute>B49F61C6-8515-70E1-D73D-A71DA4F8F84B</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="QUANTITY" id="C80171B5-0947-9EAB-6598-3A9BECF0D1DD">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>D1AAA8D1-062B-DDC5-421E-DE699AD16248</importedID>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<ownDataTypeParameters>,20,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="BLOOD_GROUP" id="8D59EE22-B8FA-6964-66B8-DF9D92E19E57">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>C49A0B89-4A83-CEE2-D6BD-05A109618B3B</importedID>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<constraintName>STOCK_BLOOD_GROUP_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="BLOOD_GROUP IN ( &apos;A&apos;, &apos;AB&apos;, &apos;B&apos;, &apos;O&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="BLOOD_RH" id="6D218DE5-3297-C54F-8DED-648EA6285534">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>0C56CC70-7CEF-B00C-F21C-EA476A6AF02A</importedID>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<constraintName>STOCK_BLOOD_RH_CK</constraintName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<checkConstraint>
+<implementationDef dbType="Generic Constraint" definition="BLOOD_RH IN ( &apos;+&apos;, &apos;-&apos; )"/>
+</checkConstraint>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="25E0BD80-B4FF-5D4E-2FE1-64D546100440" name="STOCK PK">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<importedID>614C83F5-DCBB-C893-812D-DC1592A45C25</importedID>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>30632DFE-3A1C-FBC0-945D-C43DE0F55A4F</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="A36D3FA8-2AC5-F77B-D0C9-61B6B6F55A0E" name="STOCK_GROUP_RH_HOSPITAL_UN">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-06 15:59:23 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<importedID>08DB5281-5B52-BB82-B69D-986E2F853048</importedID>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<usedAttributes>
+<attributeRef>8D59EE22-B8FA-6964-66B8-DF9D92E19E57</attributeRef>
+<attributeRef>6D218DE5-3297-C54F-8DED-648EA6285534</attributeRef>
+<attributeRef>2DB4027D-5CDE-4CEA-BE59-E7A401327E59</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

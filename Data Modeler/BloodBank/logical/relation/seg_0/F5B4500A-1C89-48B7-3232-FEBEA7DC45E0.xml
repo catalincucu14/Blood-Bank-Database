@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="DONATION_TRANSACTION" directorySegmentName="seg_0" id="F5B4500A-1C89-48B7-3232-FEBEA7DC45E0">
+<createdBy>catal</createdBy>
+<createdTime>2022-05-13 16:21:47 UTC</createdTime>
+<ownerDesignName>BloodBank</ownerDesignName>
+<engineerTo>
+<item key="EE66769D-7176-944D-F1B6-81FA81C59679" value="true"/>
+</engineerTo>
+<sourcePk>99F154F6-4F67-0095-B402-AC4B958D78A9</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>7504660C-0127-E2B5-10F0-8B06FCC448C1</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F19DCB98-804E-9294-491B-7383620E04FE</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
